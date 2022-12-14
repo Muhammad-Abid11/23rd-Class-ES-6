@@ -5,31 +5,37 @@
 
 //var function used inside function but also update by child functions
 
-//     var name="apple"
-//     if(true){
-//         name="banana"
-//     }
-// console.log(name);       //result--> banana
+/*
 
+var name = "apple"
+if (true) {
+    name = "banana"
+}
+console.log(name);       //result--> banana
+
+*/
 
 // example 2
 
-// var name="User";     //var values reasign||edit
-// var name="User2";
-// console.log(name);  // result-->  User2
+/*
 
+var name = "User";     //var values reasign||edit
+var name = "User2";
+console.log(name);  // result-->  User2
+
+*/
 
 //let block scope used inside block
 
-//     let name="User";     //let values only edit
-//     let name="User2";
+// let name = "User";     //let values only edit
+// let name = "User2";
 
 // console.log(name);  // result-->  Identifier 'name' has already been declared
 
 
 
 // const name = "User";     //const values not reasign||edit
-//     name="s"
+// name = "s"
 // console.log(name);  // result-->  Identifier 'name' has already been declared
 
 
@@ -41,46 +47,57 @@
 
 //Template Literals
 
-// let fname="abc";
-// let lname="edf";
+/*
 
-// console.log(`My name is ${fname} ${lname}`); //${any javascript function}
+let fname = "abc";
+let lname = "edf";
 
+console.log(`My name is ${fname} ${lname}`); //${any javascript function}
 
-// result-> My name is abc edf
+*/
+
+////result-> My name is abc edf
 
 
 // -----------------------------x----------------
 
 // spread operators (...)   works on arry & object
 
-// old method
+//// old method
 
-// var arr1 = ["abid", "sajid"];
-// var arr2 = ["khan", "malana"];
+/*
 
-// var merge=arr1.concat(arr2);
+var arr1 = ["abid", "sajid"];
+var arr2 = ["khan", "malana"];
 
-// console.log(merge);
+var merge = arr1.concat(arr2);
 
+console.log(merge);
+
+*/
 
 // new method
 
-// var arr1 = ["abid", "sajid"];
-// var arr2 = [...arr1,"khan", "malana"];
+/*
+
+var arr1 = ["abid", "sajid"];
+var arr2 = [...arr1, "khan", "malana"];
 
 
-// console.log(arr2);
+console.log(arr2);
 
-// on object
+*/
+
+//// on object
+
+/*
+
+var arr1 = { name: "abid" };
+var arr2 = { ...arr1, school: "saylani" };
+console.log(arr2);
 
 
-// var arr1 = { name:"abid"};
-// var arr2 = {...arr1, school:"saylani"};
-
-
-// console.log(arr2);
-
+*/
 
 // -----------------------------x----------------
 
