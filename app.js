@@ -104,14 +104,18 @@ console.log(arr2);
 
 ////  1. Object Destructure
 
-// let obj={
-//     names:"abid",
-//     classes:"fourth",
-// }
+/*
 
-// let{names,classes} = obj;   // here it save as a variable
-// console.log(names);         //---> abid
-// console.log(classes);       //---> fourth
+let obj = {
+    names: "abid",
+    classes: "fourth",
+}
+
+let { names, classes } = obj;   // here it save as a variable
+console.log(names);         //---> abid
+console.log(classes);       //---> fourth
+
+*/
 
 // -----------------------------x----------------
 
@@ -119,48 +123,56 @@ console.log(arr2);
 
 // ////  1. Array Destructure
 
-// let arr = [
-//     "abid",
-//     "fourth",
-// ]
+/*
 
-// let [name1, name2] = arr;   // here it save as a variable
-// console.log(name1);         //---> abid
-// console.log(name2);       //---> fourth
+let arr = [
+    "abid",
+    "fourth",
+]
 
+let [name1, name2] = arr;   // here it save as a variable
+console.log(name1);         //---> abid
+console.log(name2);       //---> fourth
 
+*/
 
 // -----------------------------x----------------
 
-//  ternary Operators   (if else)
+////  ternary Operators   (if else)
 
 
+//// old
 
-// var age = 20;
+/*
 
-// // old
+var age = 20;
+if (age > 30 || age < 50) {
+    console.log("30 se bara hai ")
+}
+else {
+    console.log("30 se chota hai")
+}
 
-// // if (age > 30 || age < 50) {
-// //     console.log("30 se bara hai ")
-// // }
-// // else {
-// //     console.log("30 se chota hai")
-// // }
+*/
 
-// // new
+//// new
 
-// var age =20
+/*
 
-// var check = age > 30 || age < 50
-//         ?
-//         "30 se bara hai "
-//         :
-//         age > 100
-//         ?
-//         "100 se bara hai"
-//         :
-//         "30 se chota hai ";
-// console.log(age)
+var age = 20
+var check = age > 30 || age < 50
+    ?
+    "30 se bara hai "
+    :
+    age > 100
+        ?
+        "100 se bara hai"
+        :
+        "30 se chota hai ";
+console.log(check)
+
+*/
+
 
 //     // one more thing
 
