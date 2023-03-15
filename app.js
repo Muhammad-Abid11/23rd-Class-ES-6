@@ -78,15 +78,22 @@ console.log(merge);
 
 // new method
 
-/*
 
 var arr1 = ["abid", "sajid"];
-var arr2 = [...arr1, "khan", "malana"];
-
-
+console.log(arr1);
+var arr2 = arr1; //here copy by refrence means in future if arr1 change arr2 also change.
 console.log(arr2);
+arr2[2] = "ubaid"
+console.log(arr2);
+arr1[3] = "Shiekh"
+console.log(arr1);
+var arr3 = [...arr1];// here copy by value
+console.log(arr3);
+arr3[4] = 'Abdullah';
+console.log(arr3);
 
-*/
+
+
 
 //// on object
 
