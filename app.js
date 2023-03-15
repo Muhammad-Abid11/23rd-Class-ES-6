@@ -403,18 +403,30 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
 
 //setTimeout(function() {} ,1000);    //Async JavaScript for timedelay
 
-/*
+for (var i = 0; i <= 5; i++) {
 
-setTimeout(function(){
-    console.log("Number 1")
+    setTimeout(function () {
+        console.log(i)
 
-},1000);   //   1sec
+    }, 1000);   //   1sec
+}
 
 console.log("Number 2")
 console.log("Number 3")
 
 
-*/
+for (let i = 0; i <= 5; i++) {
+
+    setTimeout(function () {
+        console.log(i)
+
+    }, 1000);   //   1sec
+}
+
+console.log("Number 2")
+console.log("Number 3")
+
+
 
 
 // -----------------------------x----------------
