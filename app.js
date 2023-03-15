@@ -78,6 +78,7 @@ console.log(merge);
 
 // new method
 
+/*
 
 var arr1 = ["abid", "sajid"];
 console.log(arr1);
@@ -92,7 +93,7 @@ console.log(arr3);
 arr3[4] = 'Abdullah';
 console.log(arr3);
 
-
+*/
 
 
 //// on object
