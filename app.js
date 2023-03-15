@@ -403,6 +403,9 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
 
 //setTimeout(function() {} ,1000);    //Async JavaScript for timedelay
 
+/*
+
+
 for (var i = 0; i <= 5; i++) {
 
     setTimeout(function () {
@@ -426,8 +429,7 @@ for (let i = 0; i <= 5; i++) {
 console.log("Number 2")
 console.log("Number 3")
 
-
-
+*/
 
 // -----------------------------x----------------
 
