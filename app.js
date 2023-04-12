@@ -40,8 +40,16 @@ console.log(name);  // result-->  User2
 
 
 
+// if (Math.random() > 0.5) {
+//   const x = 1;
+// } else {
+//   const x = 2;
+// }
+// console.log(x); // ReferenceError: x is not defined
 
+//try above example with let and Var
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 // -----------------------------x----------------
 
 
@@ -533,5 +541,37 @@ getData();
 
 // -----------------------------x----------------
 
+// Closure
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#closure 
+//check above link
+
+// if (Math.random() > 0.5) {
+//   const x = 1;
+// } else {
+//   const x = 2;
+// }
+// console.log(x); // ReferenceError: x is not defined
+
+// check above example with let and Var
 
 
+//------------------------------------x------------------
+
+// Closure scope chain
+
+
+// global scope
+const e = 10;
+function sum(a) {
+  return function (b) {
+    return function (c) {
+      // outer functions scope
+      return function (d) {
+        // local scope
+        return a + b + c + d + e;
+      };
+    };
+  };
+}
+
+console.log(sum(1)(2)(3)(4)); // 20
