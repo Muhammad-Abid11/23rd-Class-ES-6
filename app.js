@@ -152,6 +152,40 @@ console.log(name2);       //---> fourth
 
 */
 
+
+// -----------------------------x----------------
+
+//Rest parameters 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+
+// example 1
+
+// function myFun(a, b, ...manyMoreArgs) {
+//   console.log("a", a);
+//   console.log("b", b);
+//   console.log("manyMoreArgs", manyMoreArgs);
+// }
+
+// myFun("one", "two", "three", "four", "five", "six");
+
+// // Console Output:
+// // a, one
+// // b, two
+// // manyMoreArgs, ["three", "four", "five", "six"]
+
+// example 2
+
+
+// function multiply(multiplier, ...theArgs) {
+//   return theArgs.map((element) => multiplier * element);
+// }
+
+// const arr = multiply(2, 15, 25, 42);
+// console.log(arr); // [30, 50, 84]
+
+
+
 // -----------------------------x----------------
 
 ////  ternary Operators   (if else)
