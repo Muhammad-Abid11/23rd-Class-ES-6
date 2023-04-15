@@ -517,8 +517,10 @@ promise.then(function (data) {    //promise resolve here/////.then higher order 
 
 /*
 
-getData = () => {
-    let checkPromise = new Promise((resolve, reject) => {
+// getData = () => {    //no need
+
+
+    let checkPromise = new Promise((resolve, reject) => {   // promise k result 1 variable me
         fetch('https://jsonplaceholder.typicode.com/todos/1')
             .then(response => response.json())              // format changes to json
             .then(file => resolve(file))  //agar data receive too "resolve" k parameter me send krengy
@@ -526,7 +528,7 @@ getData = () => {
 
     })
 
-    checkPromise
+    checkPromise                 // variable k sath .then and .catch use
         .then((file) => {       //promise resolve here/////.then higher order function too apne parameter me function ly rha hai .
             console.log("result agaya xD===>", file)
         })
@@ -535,7 +537,8 @@ getData = () => {
         })
 
 }
-getData();
+
+// getData();   //no need
 
 
 */
@@ -609,3 +612,139 @@ function sum(a) {
 }
 
 console.log(sum(1)(2)(3)(4)); // 20
+
+
+
+//------------------------------------x------------------
+
+
+
+
+// callBack
+// koye easa kam jb wo complete ho to hamen inform krdy
+
+function Greet(dataGet) {
+    console.log(`Assalam o Alaikum  ${dataGet} as CallBack`)
+}
+
+function A(cb) {
+    console.log("1st Welcome")
+    let user = "Abid"
+    setTimeout(() => {
+        cb(user)
+    }, 1000)
+}
+
+A(Greet);
+
+
+//------------------------------------x------------------
+
+
+//  CallBack Hell
+
+function result(numResult) {
+    console.log(`Result -> ${numResult}`)
+}
+
+function add(passVal, cb) {
+    console.log("Welcome")
+    setTimeout(() => {
+        let num1 = 3 + passVal;
+
+        setTimeout(() => {
+            let num2 = 5 + num1
+
+            setTimeout(() => {          //callBack Hell
+                let num3 = 5 + num2
+
+                setTimeout(() => {
+                    let num4 = 5 + num3
+
+                    cb(num4)
+                }, 1000)
+            }, 1000)
+        }, 1000)
+    }, 1000)
+}
+
+add(4, result);
+
+
+//------------------------------------x------------------
+
+/*
+
+function add(passVal) {
+    // console.log("Welcome")
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let num1 = 3 + passVal;
+            resolve(num1);
+        }, 1000)
+    })
+}
+
+add(4).then((data) => console.log(data))
+
+*/
+
+
+
+
+
+function add(passVal) {
+    // console.log("Welcome")
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let num1 = 3 + passVal;
+            resolve(num1);
+        }, 1000)
+    })
+}
+
+add(4)
+    .then((data) => {
+        return add(data);
+    })
+    .then((data) => {
+        return add(data);
+    })
+    .then((data) => {
+        return add(data);
+    })
+    .then((data) => {
+        console.log(data);
+    })
+
+//------------------------------------x------------------
+
+// Async
+
+function add(passVal) {
+    // console.log("Welcome")
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let num1 = 3 + passVal;
+            resolve(num1);
+        }, 1000)
+    })
+}
+
+// or async function Foo(){
+(async function () {        //async us function sy pehly hoga jhn await k call kryga 2nd function ko
+    try {
+        const result = await add(4) // wait for function response
+        const result1 = await add(result)
+        const result2 = await add(result1)
+        console.log(result2);
+    } catch (error) {
+        console.log(error);
+
+    }
+
+})()
+
+
+// Foo()    //agar ap naming function rakhogy to usy apne call krna hai
+// Foo().then((data)=>console.log(data));
