@@ -430,7 +430,7 @@ console.log("Number 2")
 console.log("Number 3")
 
 */
-
+// https://www.linkedin.com/pulse/how-resolve-settimeout-inside-loop-ibe-stephen/
 // -----------------------------x----------------
 
 
@@ -533,5 +533,22 @@ getData();
 
 // -----------------------------x----------------
 
+// Promise.all me agar 1 bhi reject hua too reject ayega resolve nhi ayega( abhi tk)
 
+const promise1 = Promise.resolve(3);    //yhn reject kr k check kren
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 4000, 'foo');
+});
 
+Promise.all([promise1, promise2, promise3])
+    .then((data) => { console.log(data) })
+    .catch((error) => { console.log(error) })
+// Expected output: Array [3, 42, "foo"]
+
+    // .then((file) => {       //promise resolve here/////.then higher order function too apne parameter me function ly rha hai .
+        // console.log("result agaya xD===>", file)
+    // })
+    // .catch((error) => {
+        // console.log("error agaya :(", error)
+    // })
