@@ -617,15 +617,6 @@ console.log(sum(1)(2)(3)(4)); // 20
 
 //------------------------------------x------------------
 
-// Promise.all me agar 1 bhi reject hua too reject ayega resolve nhi ayega( abhi tk)
-
-const promise1 = Promise.resolve(3);    //yhn reject kr k check kren
-const promise2 = 42;
-const promise3 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 4000, 'foo');
-});
-
-
 
 // callBack
 // koye easa kam jb wo complete ho to hamen inform krdy
